@@ -25,6 +25,15 @@ namespace ToolKit
             //Console.WriteLine(dateTime);
             //string convertDateTime = dateTime.DateTimeToString();
             //Console.WriteLine(convertDateTime);
+            //int first = 12,second = 5;
+            //if (first.intEquals(second))
+            //{
+            //    Console.WriteLine("equals");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("not equals");
+            //}
 
             //udage of delegate
             //DelegateExample delegateExample = new DelegateExample();
@@ -33,8 +42,9 @@ namespace ToolKit
 
 
             //nameof example
-            NameOfExample nameOfExample = new NameOfExample();
-            Console.WriteLine(nameOfExample.AuthorInfo());
+            //NameOfExample nameOfExample = new NameOfExample();
+            //Console.WriteLine(nameOfExample.AuthorInfo());
+
 
             Console.ReadLine();
         }

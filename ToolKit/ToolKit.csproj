@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DelegateExample.CS" />
+    <Compile Include="DelegateExample.cs" />
     <Compile Include="Interpolation.cs" />
     <Compile Include="NameOfExample.cs" />
     <Compile Include="NullControlMechanism.cs" />

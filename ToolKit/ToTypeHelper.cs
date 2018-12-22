@@ -23,6 +23,10 @@ namespace ToolKit
         {
             return value.ToString("dd-MM-yyy");
         }
+        public static bool intEquals(this int first, int second)
+        {
+            return first == second ? true : false;
+        }
     }
 
 }
