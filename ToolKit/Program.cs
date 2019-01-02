@@ -45,6 +45,7 @@ namespace ToolKit
             //NameOfExample nameOfExample = new NameOfExample();
             //Console.WriteLine(nameOfExample.AuthorInfo());
 
+            JsonEx.CreateJsonData();
 
             Console.ReadLine();
         }

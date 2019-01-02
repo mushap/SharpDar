@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ToolKit.Models;
 
 namespace ToolKit
 {
@@ -14,30 +15,4 @@ namespace ToolKit
             return isNull;
         }
     }
-
-    //for usage in above method
-    public class Customer
-    {
-        //public Customer()
-        //{
-        //    this.Orders = new List<Order>();
-        //}
-
-        public List<Order> Orders { get; set; }
-    }
-
-    public class Order
-    {
-        //public Order()
-        //{
-        //    this.OrderDetails = new List<OrderDetails>();
-        //}
-        public List<OrderDetails> OrderDetails { get; set; }
-    }
-
-    public class OrderDetails
-    {
-        public string OrderDetailName { get; set; }
-    }
-
 }

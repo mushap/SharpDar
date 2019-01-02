@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ToolKit.Models;
 
 namespace ToolKit
 {
@@ -42,13 +43,4 @@ namespace ToolKit
 
     }
 
-
-    public class Author
-    {
-        public string Name { get; set; }
-        public string  SurName { get; set; }
-
-        public string FullName => $"{Name} {SurName}";
-
-    }
 }
