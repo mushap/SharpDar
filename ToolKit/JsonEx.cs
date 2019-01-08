@@ -8,11 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using ToolKit.Models;
 using System.Xml.Serialization;
+using Newtonsoft.Json.Linq;
 
 namespace ToolKit
 {
 
-    public static class JsonEx
+    public class JsonEx
     {
         //Create a directory if its not exist and write json data to this file
         public static void CreateJsonData()
@@ -31,7 +32,7 @@ namespace ToolKit
 
             try
             {
-                WriteJsonDataToFile(customers);
+                WriteJsonDataToTxt(customers);
             }
             catch (Exception ex)
             {
@@ -41,16 +42,52 @@ namespace ToolKit
 
         }
 
-        private static void WriteJsonDataToFile(List<Customer> customers)
+        private static void WriteJsonDataToTxt(List<Customer> customers)
         {
             string Path = "jsondata.txt";
             //var dataToWriteFile = JsonConvert.SerializeObject(customers);
 
-            using (StreamWriter _testData = new StreamWriter(Path, true))
+            using (StreamWriter streamWriter = new StreamWriter(Path, true))
             {
                 JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(_testData, customers);
+                serializer.Serialize(streamWriter, customers);
             }
         }
+
+        public static List<Customer> ReadJsonDataFromTxt()
+        {
+            List<Customer> customers = new List<Customer>();
+
+            string Path = "jsondata.txt";
+
+            if (File.Exists(Path))//if file exist
+            {
+                string json = File.ReadAllText(Path);
+
+                if (json.Any())
+                {
+                    if (json.Count(c => c == ']') > 1) //For Solve Of "Multiple JSON Root Elements Error"
+                    {
+                        json = json.Replace("[", "").Replace("]", ",");
+                        json = json.Remove(json.Length - 1);
+                        json = $"[{json}]";
+                    }
+
+                    customers = JsonConvert.DeserializeObject<List<Customer>>(json);//read json data from txt to collection
+                }
+                else
+                {
+                    CreateJsonData();
+                }
+                
+            }
+            else//if file not exist create a txt and fill with json data with above methods
+            {
+                CreateJsonData();
+            }
+
+            return customers;
+        }
+
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ToolKit.Models;
 
 namespace ToolKit
 {
@@ -45,7 +46,9 @@ namespace ToolKit
             //NameOfExample nameOfExample = new NameOfExample();
             //Console.WriteLine(nameOfExample.AuthorInfo());
 
-            JsonEx.CreateJsonData();
+            //JsonEx.CreateJsonData();
+            List<Customer> customers = new List<Customer>();
+            customers.AddRange(JsonEx.ReadJsonDataFromTxt());
 
             Console.ReadLine();
         }

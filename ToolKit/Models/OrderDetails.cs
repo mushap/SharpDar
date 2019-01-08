@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ToolKit.Models
 {
-    class OrderDetails
+  public  class OrderDetails
     {
         public string OrderDetailName { get; set; }
     }

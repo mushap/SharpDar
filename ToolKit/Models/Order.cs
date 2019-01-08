@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ToolKit.Models
 {
-    class Order
+  public  class Order
     {
         //public Order()
         //{

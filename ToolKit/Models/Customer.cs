@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ToolKit.Models
 {
-    class Customer
+   public class Customer
     {
         //public Customer()
         //{
