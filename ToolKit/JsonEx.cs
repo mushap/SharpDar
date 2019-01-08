@@ -60,28 +60,28 @@ namespace ToolKit
 
             string Path = "jsondata.txt";
 
-            if (File.Exists(Path))//if file exist
+            if (File.Exists(Path))
             {
-                string json = File.ReadAllText(Path);
+                string json = File.ReadAllText(Path);//read json data from txt 
 
                 if (json.Any())
                 {
-                    if (json.Count(c => c == ']') > 1) //For Solve Of "Multiple JSON Root Elements Error"
+                    if (json.Count(c => c == ']') > 1) //For Solve "Multiple JSON Root Elements Error"
                     {
                         json = json.Replace("[", "").Replace("]", ",");
                         json = json.Remove(json.Length - 1);
                         json = $"[{json}]";
                     }
 
-                    customers = JsonConvert.DeserializeObject<List<Customer>>(json);//read json data from txt to collection
+                    customers = JsonConvert.DeserializeObject<List<Customer>>(json);//json data (boxing in string) to collection
                 }
-                else
+                else//if file not exist create a txt and fill with json data with above methods(1*)
                 {
                     CreateJsonData();
                 }
                 
             }
-            else//if file not exist create a txt and fill with json data with above methods
+            else//same with => (1*)
             {
                 CreateJsonData();
             }
