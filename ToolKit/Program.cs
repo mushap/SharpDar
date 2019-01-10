@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using ToolKit.Models;
 
 namespace ToolKit
@@ -47,8 +48,32 @@ namespace ToolKit
             //Console.WriteLine(nameOfExample.AuthorInfo());
 
             //JsonEx.CreateJsonData();
-            List<Customer> customers = new List<Customer>();
-            customers.AddRange(JsonEx.ReadJsonDataFromTxt());
+            //List<Customer> customers = new List<Customer>();
+            //customers.AddRange(JsonEx.ReadJsonDataFromTxt());
+
+
+
+            //1-
+            Type param = Type.GetType("ToolKit.Models.Author");
+            //Type param = Type.GetType("System.String");
+
+            //2
+            //Customer customer = new Customer();
+            //Type param = customer.GetType();
+
+            Console.WriteLine("-Constructor Infos-");
+            ReflectionEx.GetConstructorInfos(param);
+           
+            Console.WriteLine("-Property Infos-");
+            ReflectionEx.GetPropertyInfos(param);
+            
+            Console.WriteLine("-Method Infos-");
+            ReflectionEx.GetMethodInfos(param);
+
+
+            //3->Runtime Reflection
+            Console.WriteLine("-DynamicallyDataBinding Infos-");
+            Console.WriteLine($"DynamicallyDataBinding:{ReflectionEx.LateBinding()}");
 
             Console.ReadLine();
         }
