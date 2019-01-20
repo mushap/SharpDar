@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolKit", "ToolKit\ToolKit.csproj", "{042D698A-88D1-4373-949F-62E78FF09675}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DorneWinService", "DorneWinService\DorneWinService.csproj", "{12D38906-2558-43B3-B4A4-E319E4065717}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{042D698A-88D1-4373-949F-62E78FF09675}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{042D698A-88D1-4373-949F-62E78FF09675}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{042D698A-88D1-4373-949F-62E78FF09675}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12D38906-2558-43B3-B4A4-E319E4065717}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12D38906-2558-43B3-B4A4-E319E4065717}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12D38906-2558-43B3-B4A4-E319E4065717}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12D38906-2558-43B3-B4A4-E319E4065717}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
