@@ -41,7 +41,7 @@
             // 
             this.serviceInstaller1.Description = "Dorne Windows Service Management";//add
             this.serviceInstaller1.DisplayName = "Dorne Win Service";//add
-            this.serviceInstaller1.ServiceName = "Service1";
+            this.serviceInstaller1.ServiceName = "DorneWinSer";
             this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;//add
             // 
             // ProjectInstaller
